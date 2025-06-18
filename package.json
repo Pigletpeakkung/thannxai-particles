@@ -1,0 +1,10 @@
+{
+  "name": "thannxai-particles",
+  "version": "1.0.0",
+  "description": "Portfolio with WebGL particle system for ThannxAI",
+  "scripts": {
+    "start": "npx serve"
+  },
+  "author": "Thanatsitt Santisamranwilai",
+  "license": "MIT"
+}
