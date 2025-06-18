@@ -4,8 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#1A1A2E">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://threejs.org https://emailjs.com; connect-src 'self' https://api.emailjs.com https://threejs.org">
-
+  
   <!-- SEO Meta Tags -->
   <title>Thanatsitt Santisamranwilai - Thai AI Developer & Cultural Designer</title>
   <meta name="description" content="Thai interdisciplinary creator bridging ancient wisdom with modern AI technology. Fashion designer turned developer, co-founder of ThannxAI.">
@@ -18,13 +17,13 @@
   <meta property="og:description" content="Interdisciplinary creator bridging ancient wisdom with modern AI technology. Fashion designer turned developer, co-founder of ThannxAI.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://thanatsitt.dev">
-  <meta property="og:image" content="https://picsum.photos/id/1000/1200/630">
+  <meta property="og:image" content="/assets/og-image.jpg">
 
   <!-- Twitter Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Thanatsitt Santisamranwilai - Thai AI Developer & Cultural Designer">
   <meta name="twitter:description" content="Interdisciplinary creator bridging ancient wisdom with modern AI technology. Fashion designer turned developer, co-founder of ThannxAI.">
-  <meta name="twitter:image" content="https://picsum.photos/id/1000/1200/630">
+  <meta name="twitter:image" content="/assets/og-image.jpg">
   <meta name="twitter:site" content="@ThanattsittS">
 
   <!-- Structured Data (JSON-LD) -->
@@ -41,38 +40,72 @@
         "https://www.instagram.com/thanattsitt.s",
         "https://x.com/ThanattsittS"
       ],
-      "description": "Thai interdisciplinary creator bridging ancient wisdom with modern AI technology. Fashion designer turned developer, co-founder of ThannxAI.",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "ThannxAI"
-      },
-      "knowsAbout": ["AI", "Cultural Design", "WebGL", "Three.js", "Thai Heritage"]
+      "description": "Thai interdisciplinary creator bridging ancient wisdom with modern AI technology. Fashion designer turned developer, co-founder of ThannxAI."
     }
   </script>
 
   <!-- Favicon -->
-  <link rel="icon" href="https://picsum.photos/id/1000/64/64" type="image/png">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 
   <!-- Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://picsum.photos" crossorigin>
-  <link rel="preconnect" href="https://api.emailjs.com" crossorigin>
-  <link rel="preconnect" href="https://threejs.org" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://www.linkedin.com">
+  <link rel="preconnect" href="https://api.emailjs.com">
 
-  <!-- Fonts -->
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 
   <!-- Alpine.js and TailwindCSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
-  <!-- DOMPurify for Input Sanitization -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.9/purify.min.js" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Playfair Display', 'serif'],
+          },
+          colors: {
+            gold: '#D4AF37',
+            deepPurple: '#1A1A2E',
+            moonSilver: '#C0C0C8',
+            cosmicBlue: '#16213E',
+            stellarPurple: '#0F3460',
+          },
+          animation: {
+            float: 'float 6s ease-in-out infinite',
+            glow: 'glow 2s ease-in-out infinite alternate',
+            pulseSlow: 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            bounceSlow: 'bounce 3s infinite',
+            spinSlow: 'spin 8s linear infinite',
+            zoomIn: 'zoomIn 0.5s ease-out',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+              '33%': { transform: 'translateY(-20px) rotate(1deg)' },
+              '66%': { transform: 'translateY(-10px) rotate(-1deg)' },
+            },
+            glow: {
+              from: { boxShadow: '0 0 20px #D4AF37, 0 0 30px #D4AF37' },
+              to: { boxShadow: '0 0 30px #D4AF37, 0 0 60px #D4AF37, 0 0 90px #D4AF37' },
+            },
+            zoomIn: {
+              '0%': { transform: 'scale(0.95)', opacity: '0' },
+              '100%': { transform: 'scale(1)', opacity: '1' },
+            },
+          },
+        }
+      }
+    }
+  </script>
 
   <!-- Custom CSS -->
   <style>
@@ -333,17 +366,23 @@
         height: 20px;
       }
     }
-    /* Add more CSS as needed */
   </style>
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="apple-touch-icon" href="/assets/logo192.png">
 </head>
-<body class="text-white font-sans antialiased overflow-x-hidden" x-data="portfolioApp()" x-init="init">
+<body class="text-white font-sans antialiased overflow-x-hidden" x-data="portfolioApp()">
   <noscript>
     <div class="text-center p-10 bg-gradient-to-r from-gold to-yellow-500 text-black">
       <h1 class="text-4xl font-bold mb-4">JavaScript is Required</h1>
       <p>Enable JavaScript to experience the full portfolio.</p>
     </div>
   </noscript>
-<!-- Loading Screen -->
+
+  <!-- Loading Screen -->
   <div id="loading" role="status" aria-label="Loading portfolio content">
     <span>Initializing Particles...</span>
     <div id="progress-container">
@@ -443,12 +482,173 @@
         <h2 class="text-4xl md:text-6xl font-bold mb-6 text-gold text-shadow animate-zoomIn">About Me</h2>
         <div class="h-1 w-24 bg-gradient-to-r from-gold to-yellow-400 mx-auto rounded-full"></div>
       </div>
-      <!-- About content with online profile image -->
-      <img src="https://picsum.photos/id/1001/400/400" alt="Thanatsitt Santisamranwilai - Thai AI Developer" class="rounded-2xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="relative">
+          <div class="glass-morphism rounded-3xl p-8 card-hover">
+            <div class="aspect-square bg-gradient-to-br from-gold/20 to-purple-600/20 rounded-2xl flex items-center justify-center relative overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-br from-gold/10 to-transparent"></div>
+              <img src="/assets/profile-placeholder.jpg" alt="Thanatsitt Santisamranwilai" class="w-full h-full object-cover rounded-2xl" loading="lazy">
+            </div>
+          </div>
+          <div class="absolute -top-4 -right-4 glass-morphism rounded-full p-4 animate-float"><i class="fas fa-palette text-2xl text-gold"></i></div>
+          <div class="absolute -bottom-4 -left-4 glass-morphism rounded-full p-4 animate-float" style="animation-delay: -1s;"><i class="fas fa-brain text-2xl text-gold"></i></div>
+        </div>
+        <div class="space-y-8">
+          <div class="glass-morphism rounded-2xl p-8 card-hover">
+            <h3 class="text-2xl font-bold mb-4 text-gold"><i class="fas fa-star mr-3"></i>Cultural Navigator</h3>
+            <p class="text-gray-300 leading-relaxed text-lg">Born from the rich tapestry of Thai heritage and global innovation, I navigate the delicate balance between preserving ancient wisdom and embracing cutting-edge technology.</p>
+          </div>
+          <div class="glass-morphism rounded-2xl p-8 card-hover">
+            <h3 class="text-2xl font-bold mb-4 text-gold"><i class="fas fa-graduation-cap mr-3"></i>Educational Journey</h3>
+            <div class="space-y-4">
+              <div class="flex items-center space-x-4">
+                <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center"><i class="fas fa-university text-gold"></i></div>
+                <div><h4 class="font-semibold text-white">London College of Fashion</h4><p class="text-gray-400">Fashion Design & Cultural Studies</p></div>
+              </div>
+              <div class="flex items-center space-x-4">
+                <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center"><i class="fas fa-robot text-gold"></i></div>
+                <div><h4 class="font-semibold text-white">AI & Technology</h4><p class="text-gray-400">Self-taught Developer & Co-founder</p></div>
+              </div>
+            </div>
+          </div>
+          <div class="glass-morphism rounded-2xl p-8 card-hover">
+            <h3 class="text-2xl font-bold mb-4 text-gold"><i class="fas fa-heart mr-3"></i>Philosophy</h3>
+            <p class="text-gray-300 leading-relaxed text-lg">I believe technology should enhance human connection, not replace it. Every project is guided by cultural sensitivity, ethical innovation, and the timeless wisdom that beauty and function are inseparable.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Gallery Section with Online Images -->
+  <!-- Skills Section -->
+  <section id="skills" class="py-20 px-4 relative">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-6xl font-bold mb-6 text-gold text-shadow animate-zoomIn">Skills & Expertise</h2>
+        <div class="h-1 w-24 bg-gradient-to-r from-gold to-yellow-400 mx-auto rounded-full"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="glass-morphism rounded-2xl card-container focus:outline-none focus:ring-2 focus:ring-gold" tabindex="0" aria-label="Design Skills Card">
+          <div class="card-front">
+            <div class="text-center mb-6">
+              <div class="w-16 h-16 bg-gradient-to-br from-gold to-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4"><i class="fas fa-palette text-2xl text-black"></i></div>
+              <h3 class="text-xl font-bold text-gold">Design</h3>
+            </div>
+            <div class="space-y-4" x-data="{ visible: false }" x-intersect="visible = true">
+              <div class="skill-item">
+                <div class="flex justify-between mb-2"><span class="text-white">Fashion Design</span><span class="text-gold" aria-label="Fashion Design proficiency: 95 percent">95%</span></div>
+                <div class="w-full bg-gray-700 rounded-full h-2"><div class="skill-bar rounded-full h-2" :style="visible ? 'width: 95%' : 'width: 0%'"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="flex justify-between mb-2"><span class="text-white">UI/UX Design</span><span class="text-gold" aria-label="UI/UX Design proficiency: 88 percent">88%</span></div>
+                <div class="w-full bg-gray-700 rounded-full h-2"><div class="skill-bar rounded-full h-2" :style="visible ? 'width: 88%' : 'width: 0%'"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="flex justify-between mb-2"><span class="text-white">Visual Identity</span><span class="text-gold" aria-label="Visual Identity proficiency: 92 percent">92%</span></div>
+                <div class="w-full bg-gray-700 rounded-full h-2"><div class="skill-bar rounded-full h-2" :style="visible ? 'width: 92%' : 'width: 0%'"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="card-back">
+            <h3 class="text-2xl font-bold text-gold mb-6">Design Expertise</h3>
+            <div class="space-y-4 text-white">
+              <div class="flex items-center justify-center space-x-2"><i class="fas fa-tshirt text-gold"></i><span>Fashion Design - 95%</span></div>
+              <div class="flex items-center justify-center space-x-2"><i class="fas fa-desktop text-gold"></i><span>UI/UX Design - 88%</span></div>
+              <div class="flex items-center justify-center space-x-2"><i class="fas fa-eye text-gold"></i><span>Visual Identity - 92%</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="glass-morphism rounded-2xl card-container focus:outline-none focus:ring-2 focus:ring-gold" tabindex="0" aria-label="Technology Skills Card">
+          <div class="card-front">
+            <div class="text-center mb-6">
+              <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"><i class="fas fa-code text-2xl text-white"></i></div>
+              <h3 class="text-xl font-bold text-gold">Technology</h3>
+            </div>
+            <div class="space-y-4" x-data="{ visible: false }" x-intersect="visible = true">
+              <div class="skill-item">
+                <div class="flex justify-between mb-2"><span class="text-white">AI Development</span><span class="text-gold" aria-label="AI Development proficiency: 85 percent">85%</span></div>
+                <div class="w-full bg-gray-700 rounded-full h-2"><div class="skill-bar rounded-full h-2" :style="visible ? 'width: 85%' : 'width: 0%'"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="flex justify-between mb-2"><span class="text-white">Web Development</span><span class="text-gold" aria-label="Web Development proficiency: 80 percent">80%</span></div>
+                <div class="w-full bg-gray-700 rounded-full h-2"><div class="skill-bar rounded-full h-2" :style="visible ? 'width: 80%' : 'width: 0%'"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="flex justify-between mb-2"><span class="text-white">Video Editing</span><span class="text-gold" aria-label="Video Editing proficiency: 78 percent">78%</span></div>
+                <div class="w-full bg-gray-700 rounded-full h-2"><div class="skill-bar rounded-full h-2" :style="visible ? 'width: 78%' : 'width: 0%'"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="card-back">
+            <h3 class="text-2xl font-bold text-gold mb-6">Tech Stack</h3>
+            <div class="space-y-4 text-white">
+              <div class="flex items-center justify-center space-x-2"><i class="fas fa-robot text-gold"></i><span>AI Development - 85%</span></div>
+              <div class="flex items-center justify-center space-x-2"><i class="fas fa-globe text-gold"></i><span>Web Development - 80%</span></div>
+              <div class="flex items-center justify-center space-x-2"><i class="fas fa-video text-gold"></i><span>Video Editing - 78%</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="glass-morphism rounded-2xl card-container focus:outline-none focus:ring-2 focus:ring-gold" tabindex="0" aria-label="Communication Skills Card">
+          <div class="card-front">
+            <div class="text-center mb-6">
+              <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4"><i class="fas fa-comments text-2xl text-white"></i></div>
+              <h3 class="text-xl font-bold text-gold">Communication</h3>
+            </div>
+            <div class="space-y-4" x-data="{ visible: false }" x-intersect="visible = true">
+              <div class="skill-item">
+                <div class="flex justify-between mb-2"><span class="text-white">Voice Acting</span><span class="text-gold" aria-label="Voice Acting proficiency: 82 percent">82%</span></div>
+                <div class="w-full bg-gray-700 rounded-full h-2"><div class="skill-bar rounded-full h-2" :style="visible ? 'width: 82%' : 'width: 0%'"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="flex justify-between mb-2"><span class="text-white">Writing</span><span class="text-gold" aria-label="Writing proficiency: 90 percent">90%</span></div>
+                <div class="w-full bg-gray-700 rounded-full h-2"><div class="skill-bar rounded-full h-2" :style="visible ? 'width: 90%' : 'width: 0%'"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="flex justify-between mb-2"><span class="text-white">Public Speaking</span><span class="text-gold" aria-label="Public Speaking proficiency: 85 percent">85%</span></div>
+                <div class="w-full bg-gray-700 rounded-full h-2"><div class="skill-bar rounded-full h-2" :style="visible ? 'width: 85%' : 'width: 0%'"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="card-back">
+            <h3 class="text-2xl font-bold text-gold mb-6">Communication Skills</h3>
+            <ul class="space-y-3 text-white text-lg"><li>🎙️ Voice Acting - 82%</li><li>✍️ Writing - 90%</li><li>📢 Public Speaking - 85%</li></ul>
+          </div>
+        </div>
+        <div class="glass-morphism rounded-2xl card-container focus:outline-none focus:ring-2 focus:ring-gold" tabindex="0" aria-label="Leadership Skills Card">
+          <div class="card-front">
+            <div class="text-center mb-6">
+              <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4"><i class="fas fa-crown text-2xl text-white"></i></div>
+              <h3 class="text-xl font-bold text-gold">Leadership</h3>
+            </div>
+            <div class="space-y-4" x-data="{ visible: false }" x-intersect="visible = true">
+              <div class="skill-item">
+                <div class="flex justify-between mb-2"><span class="text-white">Team Management</span><span class="text-gold" aria-label="Team Management proficiency: 88 percent">88%</span></div>
+                <div class="w-full bg-gray-700 rounded-full h-2"><div class="skill-bar rounded-full h-2" :style="visible ? 'width: 88%' : 'width: 0%'"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="flex justify-between mb-2"><span class="text-white">Project Planning</span><span class="text-gold" aria-label="Project Planning proficiency: 92 percent">92%</span></div>
+                <div class="w-full bg-gray-700 rounded-full h-2"><div class="skill-bar rounded-full h-2" :style="visible ? 'width: 92%' : 'width: 0%'"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="flex justify-between mb-2"><span class="text-white">Strategic Thinking</span><span class="text-gold" aria-label="Strategic Thinking proficiency: 90 percent">90%</span></div>
+                <div class="w-full bg-gray-700 rounded-full h-2"><div class="skill-bar rounded-full h-2" :style="visible ? 'width: 90%' : 'width: 0%'"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="card-back">
+            <h3 class="text-2xl font-bold text-gold mb-6">Leadership Skills</h3>
+            <div class="space-y-4 text-white">
+              <div class="flex items-center justify-center space-x-2"><i class="fas fa-users-cog text-gold"></i><span>Team Management - 88%</span></div>
+              <div class="flex items-center justify-center space-x-2"><i class="fas fa-tasks text-gold"></i><span>Project Planning - 92%</span></div>
+              <div class="flex items-center justify-center space-x-2"><i class="fas fa-chess text-gold"></i><span>Strategic Thinking - 90%</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
   <section id="gallery" class="py-20 px-4 relative">
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-16">
@@ -458,27 +658,88 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div class="glass-morphism rounded-2xl p-6 card-hover">
           <div class="relative mb-6">
-            <img src="https://picsum.photos/id/1002/800/600" alt="AI-driven Thai cultural visualization" class="rounded-2xl w-full h-64 object-cover shadow-gold transition-transform duration-500 transform hover:scale-105" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-2xl opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-              <h3 class="text-xl font-bold text-white">Cultural AI Project</h3>
-            </div>
+            <img src="/assets/project1.jpg" alt="Cultural AI Project: AI-driven Thai cultural visualization" class="rounded-2xl w-full h-64 object-cover shadow-gold transition-transform duration-500 transform hover:scale-105" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-2xl opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-6"><h3 class="text-xl font-bold text-white">Cultural AI Project</h3></div>
           </div>
         </div>
-        <!-- More gallery items with online URLs -->
+        <div class="glass-morphism rounded-2xl p-6 card-hover">
+          <div class="relative mb-6">
+            <img src="/assets/project2.jpg" alt="Thai Design Fusion: Modern fashion with traditional Thai motifs" class="rounded-2xl w-full h-64 object-cover shadow-gold transition-transform duration-500 transform hover:scale-105" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-2xl opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-6"><h3 class="text-xl font-bold text-white">Thai Design Fusion</h3></div>
+          </div>
+        </div>
+        <div class="glass-morphism rounded-2xl p-6 card-hover">
+          <div class="relative mb-6">
+            <img src="/assets/project3.jpg" alt="Digital Heritage Collection: Preserving Thai culture through digital art" class="rounded-2xl w-full h-64 object-cover shadow-gold transition-transform duration-500 transform hover:scale-105" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-2xl opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-6"><h3 class="text-xl font-bold text-white">Digital Heritage Collection</h3></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section with Sanitized Form -->
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-20 px-4 relative">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-6xl font-bold mb-6 text-gold text-shadow animate-zoomIn">Client Reviews</h2>
+        <div class="h-1 w-24 bg-gradient-to-r from-gold to-yellow-400 mx-auto rounded-full"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div class="glass-morphism rounded-2xl p-8 card-hover">
+          <div class="flex items-center mb-4">
+            <i class="fas fa-star text-yellow-300 mr-2 text-2xl" aria-hidden="true"></i><i class="fas fa-star text-yellow-300 mr-2 text-2xl" aria-hidden="true"></i><i class="fas fa-star text-yellow-300 mr-2 text-2xl" aria-hidden="true"></i><i class="fas fa-star text-yellow-300 mr-2 text-2xl" aria-hidden="true"></i><i class="fas fa-star text-yellow-300 text-2xl" aria-hidden="true"></i>
+            <span class="sr-only">5 star review</span>
+          </div>
+          <p class="text-gray-300 italic mb-6">"Thanatsitt's ability to merge cultural depth with technological precision is extraordinary. Their AI projects feel deeply human."</p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center"><i class="fas fa-user text-gold" aria-hidden="true"></i></div>
+            <div class="ml-4"><h4 class="text-white font-semibold">Sarah Lin</h4><p class="text-gray-400 text-sm">Creative Director, London</p></div>
+          </div>
+        </div>
+        <div class="glass-morphism rounded-2xl p-8 card-hover">
+          <div class="flex items-center mb-4">
+            <i class="fas fa-star text-yellow-300 mr-2 text-2xl" aria-hidden="true"></i><i class="fas fa-star text-yellow-300 mr-2 text-2xl" aria-hidden="true"></i><i class="fas fa-star text-yellow-300 mr-2 text-2xl" aria-hidden="true"></i><i class="fas fa-star text-yellow-300 mr-2 text-2xl" aria-hidden="true"></i><i class="fas fa-star text-yellow-300 text-2xl" aria-hidden="true"></i>
+            <span class="sr-only">5 star review</span>
+          </div>
+          <p class="text-gray-300 italic mb-6">"Working with Thanatsitt was a transformative experience. Their portfolio reflects both technical mastery and philosophical insight."</p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center"><i class="fas fa-user text-gold" aria-hidden="true"></i></div>
+            <div class="ml-4"><h4 class="text-white font-semibold">James Wong</h4><p class="text-gray-400 text-sm">Tech Innovator, Bangkok</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
   <section id="contact" class="py-20 px-4 relative bg-gradient-to-br from-deepPurple/50 to-cosmicBlue/70">
     <div class="max-w-7xl mx-auto">
-      <form id="contact-form" class="space-y-6" aria-label="Contact form" @submit.prevent="submitForm">
-        <input type="text" name="user_name" placeholder="Your Name" required class="bg-gray-800/50 border border-gold/20 rounded-lg py-3 px-4 w-full text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gold" aria-label="Your Name">
-        <input type="email" name="user_email" placeholder="Your Email" required class="bg-gray-800/50 border border-gold/20 rounded-lg py-3 px-4 w-full text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gold" aria-label="Your Email">
-        <textarea name="message" rows="5" placeholder="Your Message" required class="bg-gray-800/50 border border-gold/20 rounded-lg py-3 px-4 w-full text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gold" aria-label="Your Message"></textarea>
-        <button type="submit" class="w-full bg-gradient-to-r from-gold to-yellow-500 text-black font-bold py-3 px-6 rounded-lg hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-gold/50" aria-label="Send Message">Send Message</button>
-      </form>
-      <div x-show="formStatus" x-text="formStatus" class="mt-4 text-center text-gold font-semibold" role="alert"></div>
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-6xl font-bold mb-6 text-gold text-shadow animate-zoomIn">Get in Touch</h2>
+        <div class="h-1 w-24 bg-gradient-to-r from-gold to-yellow-400 mx-auto rounded-full"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <div class="space-y-8">
+          <div class="glass-morphism rounded-2xl p-8 card-hover">
+            <div class="flex items-start"><i class="fas fa-envelope text-3xl text-gold mr-4" aria-hidden="true"></i><div><h3 class="text-xl font-bold text-white mb-2">Email</h3><p class="text-gray-300">thanatsitt@thannxai.com</p></div></div>
+          </div>
+          <div class="glass-morphism rounded-2xl p-8 card-hover">
+            <div class="flex items-start"><i class="fas fa-map-marker-alt text-3xl text-gold mr-4" aria-hidden="true"></i><div><h3 class="text-xl font-bold text-white mb-2">Location</h3><p class="text-gray-300">London, UK / Bangkok, Thailand</p></div></div>
+          </div>
+        </div>
+        <div class="glass-morphism rounded-2xl p-8 card-hover">
+          <form id="contact-form" class="space-y-6" aria-label="Contact form">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <input type="text" name="user_name" placeholder="Your Name" required class="bg-gray-800/50 border border-gold/20 rounded-lg py-3 px-4 w-full text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gold" aria-label="Your Name">
+              <input type="email" name="user_email" placeholder="Your Email" required class="bg-gray-800/50 border border-gold/20 rounded-lg py-3 px-4 w-full text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gold" aria-label="Your Email">
+            </div>
+            <textarea name="message" rows="5" placeholder="Your Message" required class="bg-gray-800/50 border border-gold/20 rounded-lg py-3 px-4 w-full text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gold" aria-label="Your Message"></textarea>
+            <button type="submit" class="w-full bg-gradient-to-r from-gold to-yellow-500 text-black font-bold py-3 px-6 rounded-lg hover:scale-105 transform transition-all duration-300 hover:shadow-2xl hover:shadow-gold/50" aria-label="Send Message">Send Message</button>
+          </form>
+          <div x-show="formStatus" x-text="formStatus" class="mt-4 text-center text-gold font-semibold" role="alert"></div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -495,7 +756,7 @@
     </div>
   </footer>
 
- <!-- Alpine.js Logic -->
+  <!-- Alpine.js Logic -->
   <script>
     document.addEventListener('alpine:init', () => {
       Alpine.data('portfolioApp', () => ({
@@ -1124,7 +1385,4 @@ init();
   </script>
 </body>
 </html>
-
-
-
 
